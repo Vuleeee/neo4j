@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    
+  </style>
+</head>
+<body>
+    <button (click)="returnHome()">Home</button>
+  <div class="form-container">
+    <form (submit)="dodajJeloDugme($event)">
+      <label for="naziv">Naziv jela</label>
+      <input type="text" id="naziv" name="naziv" required>
+
+      <label for="opis">Opis</label>
+      <textarea id="opis" name="opis" required></textarea>
+
+      <label for="deskripcija">Deskripcija</label>
+      <textarea id="deskripcija" name="deskripcija" resize="vertical" required></textarea>
+
+      <label for="sastojci">Sastojci</label>
+      <select id="sastojci" name="sastojci" multiple>
+      </select>
+
+      <button type="submit">Dodaj</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<button (click)="addDish()">Dodaj Jelo</button>
+<br>
+<input
+  type="text"
+  placeholder="Unesite sastojke..."
+  id="sastojciSearch"
+  name="sastojciSearch"
+  [(ngModel)]="userInput"
+/>
+<button (click)="pretragaJela()">Pretraži Jela</button>
+
+<ul *ngIf="userInput && filteredIngredients.length > 0">
+  <li *ngFor="let ingredient of filteredIngredients">
+    {{ ingredient }}
+  </li>
+</ul>
+
+<h2>Top 3 Jela</h2>
+<ul>
+  <li *ngFor="let dish of topRatedDishes">
+    {{ dish.naziv}} - Ocena: {{ dish.rejting.low }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let category of jedinstveneKategorije" (click)="redirectToJelaLista(category)">
+    {{ category }}
+  </li>
+  </ul>

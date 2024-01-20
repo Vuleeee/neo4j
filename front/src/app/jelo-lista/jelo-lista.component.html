@@ -1,0 +1,12 @@
+<button (click)="returnHome()">Home</button>
+<p>Lista jela</p>
+<ul>
+    <li *ngFor="let dish of jelaPoKategoriji">
+      {{ dish.naziv}} - Ocena: {{ dish.rejting.low }}
+    </li>
+  </ul>
+  <ul>
+    <li *ngFor="let dish of jelaPoSastojcima">
+      {{ dish.naziv }} - Ocena: {{ dish.rejting.low }}
+    </li>
+  </ul>
